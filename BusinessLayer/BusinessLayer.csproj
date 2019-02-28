@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddPolicyDetail.cs" />
     <Compile Include="ApplyPlanBAL.cs" />
     <Compile Include="ListCustomersBAL.cs" />
     <Compile Include="PaymentBAL.cs" />
