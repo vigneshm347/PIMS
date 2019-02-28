@@ -1,0 +1,325 @@
+﻿body
+{
+margin-left:0px;
+background-color:#fff;
+height:100%;
+}
+th
+{
+    background-color:#2980b9;
+    color:#fff;
+    white-space: nowrap;
+    font-weight:600;    
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+td
+{
+   
+    font-weight:300; 
+}
+.nav-layout
+{
+    position:fixed;
+    height:100%;
+    background-color:#34495E;
+    color:#fff;
+    width:300px;
+}
+a
+{
+    padding:30px;
+    text-decoration:none;
+    font-size:15px;
+    color:#fff;
+    
+}
+a:hover
+{
+    font-size:16px;
+    color:#fff;
+    text-decoration:none;    
+}
+a:visited
+{
+    color:#fff;
+    text-decoration:none;
+    font-size:16px;
+   
+}
+.nav-header
+{
+position:absolute;
+height:10px;
+width:300px;
+font-size:20px;
+padding-top:30px;
+padding-left:20px;
+color:#fff;
+padding-bottom:20px;
+background-color:#34495E;
+  font-family: 'Oswald', sans-serif;
+}
+.nav-header [class="glyphicon glyphicon-cog"]
+{
+padding:0px 10px 0px 10px;
+}
+#mobile-view
+{
+    display:none;
+}
+
+.nav-header [class="glyphicon glyphicon-cog"]
+{
+ animation-name: rotate; 
+ animation-duration: 3s; 
+ animation-iteration-count: infinite;
+ animation-timing-function: linear;
+}
+
+@keyframes rotate {
+    from {transform: rotate(180deg);}
+    to {transform: rotate(-180deg);}
+}
+
+.item-list
+{
+    padding-bottom:20px;  
+  
+}
+.item-group
+{
+
+padding-top:100px;
+
+}
+
+glyphicon
+{
+padding-left:0px;
+}
+
+.item-list [class*="glyphicon-menu"]
+{
+display:none;
+}
+
+.item-list:hover [class*="glyphicon-menu"]
+{
+display:inline;
+}
+
+
+.glyphicon-menu-hamburger
+{
+display:none;
+}
+
+.collapse
+{
+display:none;
+}
+
+div.well-sm
+{
+ margin-left:285px;
+ background-color:#2D3E50;
+ color:#fff;
+
+}
+div.well-sm > h5
+{
+margin-left:285px;
+width:auto;
+}
+span.logout
+{
+    position:absolute;
+    top:15px;
+    right:20px;  
+}
+
+#customer-add
+{
+    margin-left:300px;
+    width:70%;
+    
+    
+}
+#search-plan
+{
+    margin-left:300px;
+    width:70%;  
+}
+
+.statistics
+{
+    margin-left:300px;
+    width:70%;
+}
+.tile-img
+{
+    float:left;
+}
+.user-count
+{
+    background-color:#3498db;
+    color:#fff;
+    font-size:30px;
+    font-family:Century Gothic;
+    width:200px;
+    height:100px;
+}
+.txt
+{
+    position:absolute;
+    font-size:40px;
+    color:#fff;
+    right:10px;
+    bottom:10px;
+}
+.fa
+{
+    
+    position:relative;
+    left:10px;
+    top:10px;
+    font-size:50px;
+}
+.fa-calendar
+{
+    font-size:20px;
+}
+
+.policy-count
+{
+    background-color:#1abc9c;
+    color:#fff;
+    font-size:30px;
+    font-family:Century Gothic;
+    width:200px;
+    height:100px;
+}
+.plans-bank-count
+{
+    background-color:#27ae60;
+    color:#fff;
+    font-size:30px;
+    font-family:Century Gothic;
+    width:200px;
+    height:100px;
+}
+
+div#nomination
+{
+    border:1px solid #000;
+    margin:0px 30px 0px 30px;
+    padding:20px;
+}
+table#nomtab
+{
+    padding:30px;   
+}
+
+
+@media only screen and (max-width: 760px) {
+.well
+{
+display:none;
+}
+#mobile-view
+{
+margin-left:80px;
+color:#fff;
+display:block; 
+background-color:#16a085;
+f
+}
+
+.item-group
+{
+    display:none;
+    width:0px;
+}
+.nav-layout 
+{
+width: 100px;
+height:100%;
+
+}
+
+#customer-add
+{
+    margin-left:100px;
+    width:auto;
+    margin-top:-250px;
+}
+#search-plan
+{
+    margin-left:100px;
+    width:auto;
+    margin-top:-250px;
+    
+}
+.statistics
+{
+    margin-left:100px;
+    width:auto;
+    margin-top:-250px;
+}
+
+.nav-header
+{
+display:none;
+width:0px;
+height:0px;
+}
+
+.items
+{
+display:none;
+width:0px;
+}
+
+
+
+.item-list:hover [class*="glyphicon-menu"]
+{
+display:none;
+width:0px;
+}
+
+.collapse
+{
+width:80px;
+display:block;
+margin-top:10px;
+}
+.collapse-list
+{
+width:80px;
+padding-top:60px;
+}
+
+a
+{
+padding-left:0%;
+color:#fff;
+}
+a:hover
+{
+font-size:15px;
+color:#fff;
+}
+
+.collapse-item-list
+{
+padding-bottom: 30px;
+}
+}

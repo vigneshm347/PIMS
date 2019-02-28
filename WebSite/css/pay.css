@@ -1,0 +1,96 @@
+﻿img#card
+{
+    width:200px;
+    height:100px;
+    float:right;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+a
+{
+    text-decoration:none;
+    color:#fff;
+}
+a:hover 
+{
+    text-decoration:none;
+    color:#fff;
+    font-style:oblique;
+    font-weight:700; 
+}
+a:active
+{
+   text-decoration:none;
+    color:#fff;
+    
+}
+a:visited
+{
+   text-decoration:none;
+    color:#fff;
+    
+}
+.bank-mode-1
+{
+    margin-left:5px;
+   
+   height:30px;
+   width:200px;
+   border-width:thin;
+   border-radius:5px;
+   border-color:Black;
+   background-color:#3498db; 
+   padding:5px;
+   text-align:center;
+   margin-bottom:10px;
+}
+.bank-mode-wrapper
+{
+    width:200px;
+   
+}
+table
+{
+    margin-left:220px;
+    margin-top:-110px;
+}
+td
+{
+   
+  
+  
+   border-radius:5px;
+   border-color:Black;
+   margin-bottom:10px;
+   white-space:nowrap;
+   margin-left:0px;
+   text-align:left;
+   color:#2980b9;
+    
+}
+#button
+{
+     margin-left:-250px;
+  
+    
+}
+#credit
+{
+    display:none;
+}
+#debit
+{
+    display:none;
+}
+#card_details
+{
+    margin:50px;
+    padding: 20px;
+    
+}

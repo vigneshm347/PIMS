@@ -1,0 +1,112 @@
+﻿#content-div
+{
+    margin:auto;
+    border-radius:25px;
+}
+img
+{
+    width:200px;   
+}
+
+.btn-info:hover
+{
+    background-color:#27ae60;
+    color:#fff;
+    border-color:#fff;
+}
+.chat-box
+{
+    position:fixed;
+   
+    background-color:#fff; 
+    margin-right:0px;
+     height: 320px;
+     width:50px;
+    top:60px;
+   border-color:#000;
+    -moz-box-shadow:    0px 0px 3px 3px #95a5a6;
+  -webkit-box-shadow: 0px 0px 3px 3px #95a5a6;
+  box-shadow:         0px 0px 3px 3px #95a5a6;
+    
+    
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+.element
+{
+    position:absolute;
+    display:none;
+    top:250px;
+    
+    
+}
+#msgbox
+{
+    width:180px;
+    -moz-box-shadow:    0px 0px 3px 3px #95a5a6;
+  -webkit-box-shadow: 0px 0px 3px 3px #95a5a6;
+  box-shadow:         0px 0px 3px 3px #95a5a6;
+}
+.fa
+{
+    font-size:25px;
+    color:#fff;
+   left:300px;
+    top:250px;
+    
+}
+#close
+{
+    color:#000;
+    margin-right:10px;
+    
+}
+th
+{
+    background-color:#d35400;
+    color:#fff;
+    font-weight:600;
+    white-space: nowrap;
+    
+}
+.well-sm
+{
+    background-color:#f39c12;
+    color:#fff;
+    font-size:20px;
+    
+}
+.note
+{
+    background-color:#fff;
+}
+.header
+{
+    top:20px;
+    display:none;
+}
+.password-change
+{
+    background-color:#fff;
+}
+@media only screen and (max-width: 760px) 
+{
+    #image
+    {
+        display:none;
+    }
+    .items
+    {
+        display:block;
+    }
+    .navbar-fixed-bottom
+    {
+        display:none;
+    }
+    
+}
