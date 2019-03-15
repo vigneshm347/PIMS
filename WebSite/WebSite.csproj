@@ -69,10 +69,12 @@
     <Content Include=".vs\PropertyInsurance\v15\.suo" />
     <Content Include=".vs\slnx.sqlite" />
     <Content Include=".vs\VSWorkspaceState.json" />
+    <Content Include="add-employee.aspx" />
     <Content Include="add-new-plan.aspx" />
     <Content Include="add-new-policy.aspx" />
     <Content Include="Admin.Master" />
     <Content Include="index.Master" />
+    <Content Include="manage-policy.aspx" />
     <Content Include="manage-users.aspx" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
@@ -141,6 +143,13 @@
     </Compile>
     <Compile Include="add-customer.aspx.designer.cs">
       <DependentUpon>add-customer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="add-employee.aspx.cs">
+      <DependentUpon>add-employee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="add-employee.aspx.designer.cs">
+      <DependentUpon>add-employee.aspx</DependentUpon>
     </Compile>
     <Compile Include="add-new-plan.aspx.cs">
       <DependentUpon>add-new-plan.aspx</DependentUpon>
@@ -213,6 +222,13 @@
     <Compile Include="LinkPolicy.asmx.cs">
       <DependentUpon>LinkPolicy.asmx</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="manage-policy.aspx.cs">
+      <DependentUpon>manage-policy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-policy.aspx.designer.cs">
+      <DependentUpon>manage-policy.aspx</DependentUpon>
     </Compile>
     <Compile Include="manage-users.aspx.cs">
       <DependentUpon>manage-users.aspx</DependentUpon>
