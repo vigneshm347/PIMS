@@ -1,12 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Data.SqlClient;
-using System.Web.Configuration;
-using System.Data;
 using EntityLayer;
 using BusinessLayer;
 
@@ -38,7 +30,7 @@ namespace PropertyInsurance
             try
             {
                 u.UserID = txtname.Text;
-                u.UserPassword = temp;
+                u.UserPassword = encryptPass;
                 /* Call the BAL method */
                 i = ub.UserAuth(u);
             }
@@ -55,6 +47,12 @@ namespace PropertyInsurance
             {
                 Session["userid"] = txtname.Text;
                 Response.Redirect("userPage.aspx");
+            }
+
+            else if (i == 3)
+            {
+                Session["customerid"] = txtname.Text;
+                Response.Redirect("EmployeeDashboard.aspx");
             }
             else
             {

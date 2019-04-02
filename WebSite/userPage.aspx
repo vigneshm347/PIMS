@@ -13,7 +13,8 @@
       <li><a href="#">Home</a></li>
       <li><a href="user-searchplan.aspx">Search Plan</a></li>
       <li><a href="paymentGateway.aspx" target="_blank">Premium Payment</a></li>
-      <li><a href="find-agent.aspx">Find Agent</a></li>
+      <li><a href="new-claim.aspx">New Claim</a></li>
+        <li><a href="view-claim.aspx">View Claims</a></li>
       
     </ul>
     <ul class="nav navbar-nav navbar-right">

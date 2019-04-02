@@ -61,5 +61,26 @@ namespace EntityLayer
             set { empdob = value; }
         }
 
+        string empcity;
+        public string employeeCity
+        {
+            get { return empcity; }
+            set { empcity = value; }
+        }
+        public string createdAt;
+
+        public string CreatedAt
+        {
+            get { return createdAt; }
+            set { createdAt = value; }
+        }
+        public string eIncome;
+
+        public string EIncome
+        {
+            get { return eIncome; }
+            set { eIncome = value; }
+        }
+
     }
 }

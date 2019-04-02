@@ -10,106 +10,79 @@
 namespace WebSite {
     
     
-    public partial class add_employee {
+    public partial class new_claim {
         
         /// <summary>
-        /// lblnote control.
+        /// txtlatitude control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblnote;
+        protected global::System.Web.UI.WebControls.TextBox txtlatitude;
         
         /// <summary>
-        /// txtname control.
+        /// txtlongitude control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtname;
+        protected global::System.Web.UI.WebControls.TextBox txtlongitude;
         
         /// <summary>
-        /// txtemail control.
+        /// txtaccidentdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtemail;
+        protected global::System.Web.UI.WebControls.TextBox txtaccidentdate;
         
         /// <summary>
-        /// lblemailerr control.
+        /// chkPassport control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblemailerr;
+        protected global::System.Web.UI.WebControls.CheckBox chkPassport;
         
         /// <summary>
-        /// txtmobile control.
+        /// txtcustomaddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtmobile;
+        protected global::System.Web.UI.WebControls.TextBox txtcustomaddress;
         
         /// <summary>
-        /// txtannual control.
+        /// ishouse control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtannual;
+        protected global::System.Web.UI.WebControls.CheckBox ishouse;
         
         /// <summary>
-        /// txtdob control.
+        /// txtvin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtdob;
+        protected global::System.Web.UI.WebControls.TextBox txtvin;
         
         /// <summary>
-        /// txtaddr control.
+        /// txtdescription control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtaddr;
-        
-        /// <summary>
-        /// Label1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
-        
-        /// <summary>
-        /// txtpincode control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtpincode;
-        
-        /// <summary>
-        /// city control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList city;
+        protected global::System.Web.UI.WebControls.TextBox txtdescription;
         
         /// <summary>
         /// btnsubmit control.
@@ -128,14 +101,5 @@ namespace WebSite {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblmailerror;
-        
-        /// <summary>
-        /// empcredentials control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder empcredentials;
     }
 }

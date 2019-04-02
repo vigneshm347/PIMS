@@ -250,7 +250,56 @@ namespace EntityLayer
             set { premiumAmt = value; }
         }
 
-        
+        string latitude;
+
+        public string Latitude
+        {
+            get { return latitude; }
+            set { latitude = value; }
+        }
+        string longitude;
+
+        public string Longitude
+        {
+            get { return longitude; }
+            set { longitude = value; }
+        }
+
+        string accidentLocation;
+
+        public string AccidentLocation
+        {
+            get { return accidentLocation; }
+            set { accidentLocation = value; }
+        }
+
+        string dateOfAccident;
+
+        public string DateOfAccident
+        {
+            get { return dateOfAccident; }
+            set { dateOfAccident = value; }
+        }
+
+   
+
+        string vehicleVIN;
+
+        public string VehicleVIN
+        {
+            get { return vehicleVIN; }
+            set { vehicleVIN = value; }
+        }
+
+        string description;
+
+        public string Description
+        {
+            get { return description; }
+            set { description = value; }
+        }
+
+
 
     }
    

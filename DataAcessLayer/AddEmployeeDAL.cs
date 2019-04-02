@@ -28,9 +28,9 @@ namespace DataAcessLayer
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
-            catch
+            catch(Exception ex)
             {
-                Console.WriteLine("Exception");
+                Console.WriteLine(ex.Message);
                 con.Close();
             }
             return 0;
@@ -50,6 +50,25 @@ namespace DataAcessLayer
                 cmd.Parameters.AddRange(s);
                 rd = new SqlDataAdapter(cmd);
                 con.Close();
+            }
+            catch
+            {
+                Console.WriteLine("Exception");
+                con.Close();
+            }
+            return rd;
+        }
+        public SqlDataAdapter GetCity()
+        {
+            try
+            {
+                con = new SqlConnection(connection);
+                con.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "usp_GetCity";
+                rd = new SqlDataAdapter(cmd);
             }
             catch
             {

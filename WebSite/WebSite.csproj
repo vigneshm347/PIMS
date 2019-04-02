@@ -73,13 +73,20 @@
     <Content Include="add-new-plan.aspx" />
     <Content Include="add-new-policy.aspx" />
     <Content Include="Admin.Master" />
+    <Content Include="employee-applyplan.aspx" />
+    <Content Include="employee-claimaction.aspx" />
+    <Content Include="employee-searchplan.aspx" />
+    <Content Include="EmployeeDashboard.aspx" />
     <Content Include="index.Master" />
+    <Content Include="manage-employee.aspx" />
     <Content Include="manage-policy.aspx" />
     <Content Include="manage-users.aspx" />
+    <Content Include="new-claim.aspx" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="obj\Debug\PropertyInsurance.csproj.GenerateResource.Cache" />
     <Content Include="obj\Debug\PropertyInsurance.csprojResolveAssemblyReference.cache" />
+    <Content Include="Employee.Master.Master" />
     <None Include="packages.config" />
     <Content Include="payment.Master" />
     <None Include="Properties\Settings.settings" />
@@ -132,6 +139,7 @@
     <Content Include="stats.aspx" />
     <Content Include="user-searchplan.aspx" />
     <Content Include="userPage.aspx" />
+    <Content Include="view-claim.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -197,6 +205,41 @@
       <DependentUpon>CheckExistingUser.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="employee-applyplan.aspx.cs">
+      <DependentUpon>employee-applyplan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employee-applyplan.aspx.designer.cs">
+      <DependentUpon>employee-applyplan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employee-claimaction.aspx.cs">
+      <DependentUpon>employee-claimaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employee-claimaction.aspx.designer.cs">
+      <DependentUpon>employee-claimaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employee-searchplan.aspx.cs">
+      <DependentUpon>employee-searchplan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employee-searchplan.aspx.designer.cs">
+      <DependentUpon>employee-searchplan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.Master.Master.cs">
+      <DependentUpon>Employee.Master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee.Master.Master.designer.cs">
+      <DependentUpon>Employee.Master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeDashboard.aspx.cs">
+      <DependentUpon>EmployeeDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeDashboard.aspx.designer.cs">
+      <DependentUpon>EmployeeDashboard.aspx</DependentUpon>
+    </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -223,6 +266,13 @@
       <DependentUpon>LinkPolicy.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="manage-employee.aspx.cs">
+      <DependentUpon>manage-employee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-employee.aspx.designer.cs">
+      <DependentUpon>manage-employee.aspx</DependentUpon>
+    </Compile>
     <Compile Include="manage-policy.aspx.cs">
       <DependentUpon>manage-policy.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -236,6 +286,13 @@
     </Compile>
     <Compile Include="manage-users.aspx.designer.cs">
       <DependentUpon>manage-users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="new-claim.aspx.cs">
+      <DependentUpon>new-claim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="new-claim.aspx.designer.cs">
+      <DependentUpon>new-claim.aspx</DependentUpon>
     </Compile>
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
@@ -318,6 +375,13 @@
     </Compile>
     <Compile Include="userPage.Master.designer.cs">
       <DependentUpon>userPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="view-claim.aspx.cs">
+      <DependentUpon>view-claim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view-claim.aspx.designer.cs">
+      <DependentUpon>view-claim.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

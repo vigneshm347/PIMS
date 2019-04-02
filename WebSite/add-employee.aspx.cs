@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Text;
 using System.Data.SqlClient;
@@ -27,7 +23,21 @@ namespace WebSite
             {
                 Response.Redirect("sessionExpired.htm");
             }
-         }
+            try
+            {
+                SqlDataAdapter a = eb.ReqCity();
+                DataSet dt = new DataSet();
+                a.Fill(dt);
+                city.DataSource = dt;
+                city.DataTextField = "city_name";
+                city.DataBind(); ;
+            }
+            catch (Exception ex)
+            {
+                Response.Write(ex);
+
+            }
+        }
         protected void empsubmit_Click(object sender, EventArgs e)
         {
             AddEmployee();
@@ -41,9 +51,13 @@ namespace WebSite
             e.employeeName = name;
             e.employeeEmail = txtemail.Text;
             e.employeeMobile = txtmobile.Text;
+            e.EIncome = txtannual.Text;
             e.employeePincode = txtpincode.Text;
             e.employeeAddress = txtaddr.Text;
-            e.employeeDob = txtdob.Text;
+            //Console.WriteLine(e.employeeDob + " " + txtdob.Text);
+            e.employeeDob = "1995-01-01";
+            e.CreatedAt = DateTime.Now.ToString();
+            e.employeeCity = city.SelectedValue.ToString();
             /* Calls a method in BAL */
             eb.EmployeeInsertBusiness(e);
             /* Method used to show the Customer ID and Password */

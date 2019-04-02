@@ -13,15 +13,18 @@ namespace BusinessLayer
     {
         public void EmployeeInsertBusiness(Employee e)
         {
-            SqlParameter[] sp = new SqlParameter[7];
+            SqlParameter[] sp = new SqlParameter[10];
 
-            sp[0] = new SqlParameter("@ename", e.employeeName);
-            sp[1] = new SqlParameter("@eemailid", e.employeeEmail);
-            sp[2] = new SqlParameter("@emobile", e.employeeMobile);
-            sp[3] = new SqlParameter("@eaddress", e.employeeAddress);
-            sp[4] = new SqlParameter("@epincode", e.employeePincode);
-            sp[5] = new SqlParameter("@epassword", e.employeePass);
-            sp[6] = new SqlParameter("@edob", e.employeeDob);
+            sp[0] = new SqlParameter("@upassword", e.employeePass);
+            sp[1] = new SqlParameter("@uname", e.employeeName);
+            sp[2] = new SqlParameter("@emailid", e.employeeEmail);
+            sp[3] = new SqlParameter("@mobile", e.employeeMobile);
+            sp[4] = new SqlParameter("@annual_income", e.EIncome);
+            sp[5] = new SqlParameter("@pincode", e.employeePincode);
+            sp[6] = new SqlParameter("@address", e.employeeAddress);
+            sp[7] = new SqlParameter("@dob", e.employeeDob);
+            sp[8] = new SqlParameter("@created_at", e.createdAt);
+            sp[9] = new SqlParameter("@city_name", e.employeeCity);
             try
             {
                 AddEmployeeDAL ed = new AddEmployeeDAL();
@@ -37,10 +40,16 @@ namespace BusinessLayer
         {
             SqlParameter[] sp = new SqlParameter[1];
 
-            sp[0] = new SqlParameter("@eemailid", e.employeeEmail);
+            sp[0] = new SqlParameter("@emailid", e.employeeEmail);
 
             AddEmployeeDAL ed = new AddEmployeeDAL();
             SqlDataAdapter rd = ed.GetEmployeeCredential(sp);
+            return rd;
+        }
+        public SqlDataAdapter ReqCity()
+        {
+            AddEmployeeDAL ed = new AddEmployeeDAL();
+            SqlDataAdapter rd = ed.GetCity();
             return rd;
         }
         public string generatePassword()

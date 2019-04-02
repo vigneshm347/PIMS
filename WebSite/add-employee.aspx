@@ -115,7 +115,13 @@ maxDate : 0
 <li class="item-list"><span class="glyphicon glyphicon-signal"></span><a href="admin.aspx">Statistics</a><span class=" arrow glyphicon glyphicon-menu-right"></span></li>
 <li class="item-list"><span class="glyphicon glyphicon-search"></span><a  href="search-plan.aspx">Search Plan</a><span class=" arrow glyphicon glyphicon-menu-right"></span></li>
 <li class="item-list"><span class="glyphicon glyphicon-file"></span><a href="ApplyPlan.aspx">Apply Plan</a><span class=" arrow glyphicon glyphicon-menu-right"></span></li>
-<li class="item-list"><span class="glyphicon glyphicon-plus-sign"></span><a href="#">Add Customer</a><span class=" arrow glyphicon glyphicon-menu-right"></span></li>
+<li class="item-list"><span class="glyphicon glyphicon-plus-sign"></span><a href="add-customer.aspx">Add Customer</a><span class=" arrow glyphicon glyphicon-menu-right"></span></li>
+<li class="item-list"><span class="glyphicon glyphicon-plus-sign"></span><a href="#">Add Employee</a><span class=" arrow glyphicon glyphicon-menu-right"></span></li>
+<li class="item-list"><span class="glyphicon glyphicon-plus-sign"></span><a href="manage-users.aspx">Manage Users</a><span class=" arrow glyphicon glyphicon-menu-right"></span></li>
+<li class="item-list"><span class="glyphicon glyphicon-plus-sign"></span><a href="manage-employee.aspx">Manage Employee</a><span class=" arrow glyphicon glyphicon-menu-right"></span></li>
+<li class="item-list"><span class="glyphicon glyphicon-plus-sign"></span><a href="add-new-plan.aspx">Manage plan</a><span class=" arrow glyphicon glyphicon-menu-right"></span></li>
+<li class="item-list"><span class="glyphicon glyphicon-plus-sign"></span><a href="add-new-policy.aspx">Add new Policy</a><span class=" arrow glyphicon glyphicon-menu-right"></span></li>
+<li class="item-list"><span class="glyphicon glyphicon-plus-sign"></span><a href="manage-policy.aspx">Manage Policy</a><span class=" arrow glyphicon glyphicon-menu-right"></span></li>
 <li class="item-list"><span class="glyphicon glyphicon-file"></span><a href="paymentGateway.aspx" target="_blank">Premium Payment</a><span class=" arrow 	glyphicon glyphicon-menu-right"></span></li>
 
 </ul>
@@ -172,6 +178,12 @@ maxDate : 0
                 <asp:TextBox ID="txtmobile" autocomplete="off" TextMode="Number" runat="server" ClientIDMode="Static"
                     CssClass="form-control"></asp:TextBox><br />
             </div>
+            <div class="col-lg-4 col-sm-12 col-xs-12">
+                <label for="txtannual">
+                    Annual Income</label>
+                <asp:TextBox ID="txtannual" TextMode="Number" autocomplete="off" CssClass="form-control"
+                    ClientIDMode="Static" runat="server"></asp:TextBox><br />
+            </div>
         </div>
         <div class="row">
             <div class="col-lg-4 col-sm-10 col-xs-10">
@@ -194,6 +206,12 @@ maxDate : 0
                     Pincode</label>
                 <asp:TextBox ID="txtpincode" TextMode="Number" autocomplete="off" MaxLength="6" CssClass="form-control"
                     ClientIDMode="Static" runat="server"></asp:TextBox><br />
+            </div>
+            <div class="col-lg-3 col-sm-12 col-xs-12">
+                <label for="city">
+                    City</label>
+                <asp:DropDownList ID="city" ClientIDMode="Static" CssClass="form-control" runat="server">
+                </asp:DropDownList>
             </div>
         </div>
         <div class="row">

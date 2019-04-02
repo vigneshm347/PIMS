@@ -1,9 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="manage-users.aspx.cs" Inherits="WebSite.manage_users" %>
+﻿    <%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="manage-employee.aspx.cs" Inherits="WebSite.manage_employee" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-<div class="row">
+    <div class="row">
 <nav class="nav-layout">
 <div class="nav-header">ADMIN<span class="glyphicon glyphicon-cog"><span></div>
 <div class="items">
@@ -13,12 +13,13 @@
 <li class="item-list"><span class="glyphicon glyphicon-file"></span><a href="ApplyPlan.aspx">Apply Plan</a><span class=" arrow glyphicon glyphicon-menu-right"></span></li>
 <li class="item-list"><span class="glyphicon glyphicon-plus-sign"></span><a href="add-customer.aspx">Add Customer</a><span class=" arrow glyphicon glyphicon-menu-right"></span></li>
 <li class="item-list"><span class="glyphicon glyphicon-plus-sign"></span><a href="add-employee.aspx">Add Employee</a><span class=" arrow glyphicon glyphicon-menu-right"></span></li>
-<li class="item-list"><span class="glyphicon glyphicon-plus-sign"></span><a href="#">Manage Users</a><span class=" arrow glyphicon glyphicon-menu-right"></span></li>
-<li class="item-list"><span class="glyphicon glyphicon-plus-sign"></span><a href="manage-employee.aspx">Manage Employee</a><span class=" arrow glyphicon glyphicon-menu-right"></span></li>
+<li class="item-list"><span class="glyphicon glyphicon-plus-sign"></span><a href="manage-users.aspx">Manage Users</a><span class=" arrow glyphicon glyphicon-menu-right"></span></li>
+<li class="item-list"><span class="glyphicon glyphicon-plus-sign"></span><a href="#">Manage Employee</a><span class=" arrow glyphicon glyphicon-menu-right"></span></li>
 <li class="item-list"><span class="glyphicon glyphicon-plus-sign"></span><a href="add-new-plan.aspx">Manage plan</a><span class=" arrow glyphicon glyphicon-menu-right"></span></li>
 <li class="item-list"><span class="glyphicon glyphicon-plus-sign"></span><a href="add-new-policy.aspx">Add new Policy</a><span class=" arrow glyphicon glyphicon-menu-right"></span></li>
 <li class="item-list"><span class="glyphicon glyphicon-plus-sign"></span><a href="manage-policy.aspx">Manage Policy</a><span class=" arrow glyphicon glyphicon-menu-right"></span></li>
 <li class="item-list"><span class="glyphicon glyphicon-file"></span><a href="paymentGateway.aspx" target="_blank">Premium Payment</a><span class=" arrow 	glyphicon glyphicon-menu-right"></span></li>
+
 </ul>
 </div>
 </nav>
@@ -46,7 +47,7 @@
         </ul>
     </div>
     <div id="search-plan" class="container">
-         <asp:GridView CssClass="table table-responsive" ID="GridView1" runat="server" AutoGenerateColumns="False" OnRowCancelingEdit="GridView1_RowCancelingEdit" CellPadding="6" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating">
+         <asp:GridView CssClass="table table-responsive" ID="GridViewManageEmployee" runat="server" AutoGenerateColumns="False" OnRowCancelingEdit="GridView1_RowCancelingEdit" CellPadding="6" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating">
        <Columns>
            <asp:TemplateField>
                <ItemTemplate>
@@ -64,23 +65,23 @@
             </asp:TemplateField>
             <asp:TemplateField HeaderText="User ID">  
                     <ItemTemplate>  
-                        <asp:Label ID="lbl_userid" runat="server" Text='<%#Eval("user_id") %>'></asp:Label>  
+                        <asp:Label ID="lbl_userid" runat="server" Text='<%#Eval("employee_id") %>'></asp:Label>  
                     </ItemTemplate>  
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Name">  
                     <ItemTemplate>  
-                        <asp:Label ID="lbl_uname" runat="server" Text='<%#Eval("uname") %>'></asp:Label>  
+                        <asp:Label ID="lbl_ename" runat="server" Text='<%#Eval("name") %>'></asp:Label>  
                     </ItemTemplate>  
                     <EditItemTemplate>  
-                        <asp:TextBox ID="txt_uname" MaxLength="50" runat="server" Text='<%#Eval("uname") %>'></asp:TextBox>  
+                        <asp:TextBox ID="txt_ename" MaxLength="50" runat="server" Text='<%#Eval("name") %>'></asp:TextBox>  
                     </EditItemTemplate>  
             </asp:TemplateField> 
             <asp:TemplateField HeaderText="Email">  
                     <ItemTemplate>  
-                        <asp:Label ID="lbl_email" runat="server" Text='<%#Eval("emailid") %>'></asp:Label>  
+                        <asp:Label ID="lbl_email" runat="server" Text='<%#Eval("email") %>'></asp:Label>  
                     </ItemTemplate>  
                     <EditItemTemplate>  
-                        <asp:TextBox ID="txt_email" MaxLength="50" runat="server" Text='<%#Eval("emailid") %>'></asp:TextBox>  
+                        <asp:TextBox ID="txt_email" MaxLength="50" runat="server" Text='<%#Eval("email") %>'></asp:TextBox>  
                     </EditItemTemplate>  
             </asp:TemplateField>
 
@@ -110,10 +111,7 @@
                         <asp:TextBox ID="txt_address" MaxLength="100" runat="server" Text='<%#Eval("address") %>'></asp:TextBox>  
                     </EditItemTemplate>  
             </asp:TemplateField>
-
-
-
-                       <asp:TemplateField HeaderText="Status">  
+            <asp:TemplateField HeaderText="Status">  
                     <ItemTemplate>  
                         <asp:Label ID="lbl_isactive" runat="server" Text='<%#Eval("isActive") %>'></asp:Label>  
                     </ItemTemplate>  
@@ -133,5 +131,5 @@
     </div>  
 
     
-</asp:Content>
 
+</asp:Content>
