@@ -23,7 +23,7 @@
 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
     <ContentTemplate>
         <asp:GridView CssClass="table table-bordered" ID="GridViewManageClaims" runat="server" AutoGenerateColumns="false" 
-            DataKeyNames="claim_id" OnRowEditing="OnRowEditing" OnRowCancelingEdit="OnRowCancelingEdit" PageSize = "10" AllowPaging ="true" OnPageIndexChanging = "OnPaging"
+            DataKeyNames="claim_id" OnRowEditing="OnRowEditing" OnRowCancelingEdit="OnRowCancelingEdit" PageSize = "4" AllowPaging ="true" OnPageIndexChanging = "OnPaging"
             OnRowUpdating="OnRowUpdating" EmptyDataText="No records has been added."
             Width="450">
             <Columns>
@@ -50,6 +50,13 @@
                 <asp:TemplateField HeaderText="VIN # (If any)" ItemStyle-Width="150">
                     <ItemTemplate>
                         <asp:Label ID="lblvin" runat="server" Text='<%# Eval("vin") %>'></asp:Label>
+                    </ItemTemplate>
+
+                </asp:TemplateField>
+
+                <asp:TemplateField HeaderText="Property Type" ItemStyle-Width="150">
+                    <ItemTemplate>
+                        <asp:Label ID="lblproperty" runat="server" Text='<%# Eval("property_type") %>'></asp:Label>
                     </ItemTemplate>
 
                 </asp:TemplateField>
@@ -97,13 +104,16 @@
                 <asp:CommandField ButtonType="Button" ShowEditButton="true"  />
           
             </Columns>
+            <pagerstyle backcolor="orange"
+                      verticalalign="Bottom"
+                      horizontalalign="Center"/>
         </asp:GridView>
         
     </ContentTemplate>
 </asp:UpdatePanel>
 </div>
 
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBrNtpIzeyP0SKYIpA7vbtiO0GaJCUEoqI&sensor=false"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?&sensor=false"></script>
 <script type="text/javascript">
     function GetAddress() {
         var lat = parseFloat(document.getElementById("txtLatitude").value);

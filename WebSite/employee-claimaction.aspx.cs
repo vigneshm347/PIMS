@@ -18,7 +18,7 @@ namespace WebSite
         private void BindGrid()
         {
             string constr = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
-            string query = "SELECT claim_id, accident_date, accident_address, vin, accident_description, claim_status, customer_id, reviewer_comments FROM claim_manager";
+            string query = "SELECT claim_id, accident_date, accident_address, vin, accident_description, claim_status, customer_id, reviewer_comments, property_type FROM claim_manager order by claim_id";
             using (SqlConnection con = new SqlConnection(constr))
             {
                 using (SqlDataAdapter sda = new SqlDataAdapter(query, con))
