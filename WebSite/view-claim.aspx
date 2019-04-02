@@ -18,15 +18,42 @@
   </div>
 </nav>
     <div class="container">
-    <asp:GridView ID="GridViewViewClaims" EmptyDataText="No records has been added" CssClass="table table-bordered" runat="server" AutoGenerateColumns="false" AllowPaging="true"
-     PageSize="10">
+        <h3>Approved Claims</h3>
+    <asp:GridView ID="GridViewViewAcceptedClaims" EmptyDataText="No records has been added" CssClass="table table-bordered" runat="server" AutoGenerateColumns="false"
+     >
     <Columns>
         <asp:BoundField  DataField="claim_id" HeaderText="Claim Reference #" />
-        <asp:BoundField  DataField="accident_date" HeaderText="Claim date" />
+        <asp:BoundField  DataField="accident_date" HeaderText="Claim date"  DataFormatString="{0:MM/dd/yyyy}"  />
         <asp:BoundField  DataField="accident_address" HeaderText="Accident Address" />
         <asp:BoundField  DataField="vin" HeaderText="VIN (If applciable)" />
         <asp:BoundField  DataField="accident_description" HeaderText="Description" />
-        <asp:BoundField  DataField="claim_status" HeaderText="STATUS" />
+        <asp:BoundField  DataField="claim_status" HeaderText="STATUS" ItemStyle-ForeColor="Green"/>
+        <asp:BoundField  DataField="reviewer_comments" HeaderText="COMMENTS" />
+    </Columns>
+</asp:GridView>
+        <h3>Rejected Claims</h3>
+        <asp:GridView ID="GridViewViewRejectedClaims" EmptyDataText="No records has been added" CssClass="table table-bordered" runat="server" AutoGenerateColumns="false" >
+    <Columns>
+        <asp:BoundField  DataField="claim_id" HeaderText="Claim Reference #" />
+        <asp:BoundField  DataField="accident_date" HeaderText="Claim date"  DataFormatString="{0:MM/dd/yyyy}"  />
+        <asp:BoundField  DataField="accident_address" HeaderText="Accident Address" />
+        <asp:BoundField  DataField="vin" HeaderText="VIN (If applciable)" />
+        <asp:BoundField  DataField="accident_description" HeaderText="Description" />
+        <asp:BoundField  DataField="claim_status" HeaderText="STATUS" ItemStyle-ForeColor="Red"/>
+        <asp:BoundField  DataField="reviewer_comments" HeaderText="COMMENTS" />
+    </Columns>
+</asp:GridView>
+        <h3>Pending Claims</h3>
+        <asp:GridView ID="GridViewViewPendingClaims" EmptyDataText="No records has been added" CssClass="table table-bordered" runat="server" AutoGenerateColumns="false"
+     >
+    <Columns>
+        <asp:BoundField  DataField="claim_id" HeaderText="Claim Reference #" />
+        <asp:BoundField  DataField="accident_date" HeaderText="Claim date"  DataFormatString="{0:MM/dd/yyyy}"  />
+        <asp:BoundField  DataField="accident_address" HeaderText="Accident Address" />
+        <asp:BoundField  DataField="vin" HeaderText="VIN (If applciable)" />
+        <asp:BoundField  DataField="accident_description" HeaderText="Description" />
+        <asp:BoundField  DataField="claim_status" HeaderText="STATUS" ItemStyle-ForeColor="Orange"/>
+        <asp:BoundField  DataField="reviewer_comments" HeaderText="COMMENTS" />
     </Columns>
 </asp:GridView>
         </div>

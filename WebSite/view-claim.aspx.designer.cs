@@ -13,12 +13,30 @@ namespace WebSite {
     public partial class view_claim {
         
         /// <summary>
-        /// GridViewViewClaims control.
+        /// GridViewViewAcceptedClaims control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewViewClaims;
+        protected global::System.Web.UI.WebControls.GridView GridViewViewAcceptedClaims;
+        
+        /// <summary>
+        /// GridViewViewRejectedClaims control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridViewViewRejectedClaims;
+        
+        /// <summary>
+        /// GridViewViewPendingClaims control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridViewViewPendingClaims;
     }
 }

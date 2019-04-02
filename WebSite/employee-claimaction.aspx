@@ -23,7 +23,7 @@
 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
     <ContentTemplate>
         <asp:GridView CssClass="table table-bordered" ID="GridViewManageClaims" runat="server" AutoGenerateColumns="false" 
-            DataKeyNames="claim_id" OnRowEditing="OnRowEditing" OnRowCancelingEdit="OnRowCancelingEdit" PageSize = "3" AllowPaging ="true" OnPageIndexChanging = "OnPaging"
+            DataKeyNames="claim_id" OnRowEditing="OnRowEditing" OnRowCancelingEdit="OnRowCancelingEdit" PageSize = "10" AllowPaging ="true" OnPageIndexChanging = "OnPaging"
             OnRowUpdating="OnRowUpdating" EmptyDataText="No records has been added."
             Width="450">
             <Columns>
@@ -35,7 +35,7 @@
                 </asp:TemplateField>
                 <asp:TemplateField HeaderText="Claim created on" ItemStyle-Width="150">
                     <ItemTemplate>
-                        <asp:Label ID="lblaccidentdate" runat="server" Text='<%# Eval("accident_date") %>'></asp:Label>
+                        <asp:Label ID="lblaccidentdate" runat="server" Text='<%# Eval("accident_date", "{0:dd-MMM-yyyy}") %>'></asp:Label>
                     </ItemTemplate>
 
                 </asp:TemplateField>
@@ -71,7 +71,10 @@
                 <asp:TemplateField HeaderText="Status" ItemStyle-Width="150">
                     <ItemTemplate>
 
-                        <asp:Label ID="lblstatus" runat="server" Text='<%# Eval("claim_status") %>'></asp:Label>
+                        <asp:Label ID="lblstatus" runat="server" Text='<%# Eval("claim_status") %>'
+   
+                            ForeColor='<%# ((Eval("claim_status").ToString() == "REJECTED") ? System.Drawing.Color.Red: System.Drawing.Color.Green) %> '>
+                            ></asp:Label>
                     </ItemTemplate>
                     <EditItemTemplate>
                         <asp:DropDownList ID="ddlstatus" runat="server">
@@ -81,6 +84,16 @@
                         </asp:DropDownList>
                     </EditItemTemplate>
                 </asp:TemplateField>
+
+                <asp:TemplateField HeaderText="Comments" ItemStyle-Width="300">
+                    <ItemTemplate>
+                        <asp:Label ID="lblcomment" runat="server" Text='<%# Eval("reviewer_comments") %>'></asp:Label>
+                    </ItemTemplate>
+                    <EditItemTemplate>
+                        <asp:TextBox ID="txtcomments" runat="server" Text='<%# Eval("reviewer_comments") %>' Width="140"></asp:TextBox>
+                    </EditItemTemplate>
+                </asp:TemplateField>
+
                 <asp:CommandField ButtonType="Button" ShowEditButton="true"  />
           
             </Columns>
@@ -90,5 +103,20 @@
 </asp:UpdatePanel>
 </div>
 
-
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBrNtpIzeyP0SKYIpA7vbtiO0GaJCUEoqI&sensor=false"></script>
+<script type="text/javascript">
+    function GetAddress() {
+        var lat = parseFloat(document.getElementById("txtLatitude").value);
+        var lng = parseFloat(document.getElementById("txtLongitude").value);
+        var latlng = new google.maps.LatLng(lat, lng);
+        var geocoder = geocoder = new google.maps.Geocoder();
+        geocoder.geocode({ 'latLng': latlng }, function (results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                if (results[1]) {
+                    alert("Location: " + results[1].formatted_address);
+                }
+            }
+        });
+    }
+    </script>
 </asp:Content>
