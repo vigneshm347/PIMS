@@ -7,11 +7,14 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="#">Your Wall</a>
     </div>
-    <ul class="nav navbar-nav">
+<ul class="nav navbar-nav">
       <li><a href="userPage.aspx">Home</a></li>
       <li><a href="user-searchplan.aspx">Search Plan</a></li>
-      <li><a href="paymentGateway.aspx" target="_blank">Premium Payment</a></li>
-      <li><a href="#">New Claim</a></li>
+      <li ><a href="paymentGateway.aspx" target="_blank">Premium Payment</a></li>
+      <li class="active"><a href="#">New Claim</a></li>
+        <li><a href="view-claim.aspx">View Claims</a></li>
+        <li><a href="add-property.aspx">Add Property</a></li>
+      
     </ul>
   </div>
 </nav>

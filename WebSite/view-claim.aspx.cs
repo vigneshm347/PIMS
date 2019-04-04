@@ -12,6 +12,11 @@ namespace WebSite
         {
             if (!this.IsPostBack)
             {
+
+                if (Session["userid"] == null)
+                {
+                    Response.Redirect("sessionExpired.htm");
+                }
                 this.BindGridAccept();
                 this.BindGridReject();
                 this.BindGridPending();

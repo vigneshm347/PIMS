@@ -7,12 +7,14 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="#">Your Wall</a>
     </div>
-    <ul class="nav navbar-nav">
+   <ul class="nav navbar-nav">
       <li><a href="userPage.aspx">Home</a></li>
-      <li><a href="#">Search Plan</a></li>
+      <li class="active"><a href="#">Search Plan</a></li>
       <li><a href="paymentGateway.aspx" target="_blank">Premium Payment</a></li>
-      <li><a href="find-agent.aspx" >Find Agent</a></li>
-    
+      <li><a href="new-claim.aspx">New Claim</a></li>
+    <li><a href="view-claim.aspx">View Claims</a></li>
+    <li><a href="add-property.aspx">Add Property</a></li>
+      
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><li><asp:Button ID="Button1" runat="server" CssClass="btn btn-link" Text="Logout" 

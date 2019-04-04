@@ -9,6 +9,7 @@ using System.Data;
 using System.Text;
 using EntityLayer;
 using BusinessLayer;
+using System.Configuration;
 
 namespace PropertyInsurance
 {
@@ -102,6 +103,9 @@ namespace PropertyInsurance
             Session.Abandon();
             Response.Redirect("index.aspx");
         }
+
+
+
 
     }
 }

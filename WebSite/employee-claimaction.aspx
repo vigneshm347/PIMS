@@ -2,6 +2,13 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <head>
+        <style>
+            .panel-group{
+                width: 80%;
+            }
+        </style>
+    </head>
     <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -111,6 +118,31 @@
         
     </ContentTemplate>
 </asp:UpdatePanel>
+
+    <div>
+        <h3>
+            Search customer!
+        </h3>
+        <div class="row">
+            <div class="col-lg-6">
+                <asp:DropDownList ID="ddlcustomers" ClientIDMode="Static" CssClass="form-control" runat="server">
+                </asp:DropDownList>
+            </div>
+
+            <div class="col-lg-6">
+                <asp:Button runat="server" onClick ="btn_fetchCustomerPolicy" Width="80%" CssClass="btn btn-info" ID="btngetuserinfo" ClientIDMode="Static" Text="Search User"></asp:Button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <br />
+                <asp:PlaceHolder ID="userpolicyinfo" runat="server"></asp:PlaceHolder>
+                    
+            
+            </div>
+        </div>
+    </div>
 </div>
 
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?&sensor=false"></script>

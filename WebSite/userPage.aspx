@@ -15,6 +15,7 @@
       <li><a href="paymentGateway.aspx" target="_blank">Premium Payment</a></li>
       <li><a href="new-claim.aspx">New Claim</a></li>
         <li><a href="view-claim.aspx">View Claims</a></li>
+        <li><a href="add-property.aspx">Add Property</a></li>
       
     </ul>
     <ul class="nav navbar-nav navbar-right">
@@ -29,6 +30,9 @@
 <asp:PlaceHolder ID="phpolinfo" runat="server"></asp:PlaceHolder>
 </div>
 
+<div class="row">
+
+</div>
 
 <div class="navbar navbar-default navbar-fixed-bottom">
     <div class="container">

@@ -18,6 +18,10 @@ namespace WebSite
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            if (Session["userid"] == null)
+            {
+                Response.Redirect("sessionExpired.htm");
+            }
         }
 
         protected void btnsubmit_Click(object sender, EventArgs e)

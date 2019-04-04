@@ -128,6 +128,7 @@ jQuery.validator.addMethod("custidCheck",
         <li><a href="#about">ABOUT</a></li>
         <li><a href="#services">SERVICES</a></li>
         <li><a href="#insure">WE INSURE</a></li>
+        <li><a href="quote-generator.aspx">GET QUOTE</a></li>
 
         
       </ul>
