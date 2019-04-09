@@ -29,7 +29,7 @@ namespace WebSite
             dt = new DataTable();
             con = new SqlConnection(connection);
             con.Open();
-            adapt = new SqlDataAdapter("Select id, employee_id, name, email, mobile, pincode, address, isActive from employee_info", con);
+            adapt = new SqlDataAdapter("Select id, user_id, uname, emailid, mobile, pincode, address, isActive from user_info where role_id = 3", con);
             adapt.Fill(dt);
             if (dt.Rows.Count > 0)
             {
@@ -51,22 +51,22 @@ namespace WebSite
             {
                 //Finding the controls from Gridview for the row which is going to update  
                 SqlCommand cmd;
-                Label id = GridViewManageEmployee.Rows[e.RowIndex].FindControl("lbl_ID") as Label;
-                TextBox name = GridViewManageEmployee.Rows[e.RowIndex].FindControl("txt_ename") as TextBox;
+            int id = Convert.ToInt32(GridViewManageEmployee.DataKeys[e.RowIndex].Values[0]);
+            TextBox name = GridViewManageEmployee.Rows[e.RowIndex].FindControl("txt_ename") as TextBox;
                 TextBox emailid = GridViewManageEmployee.Rows[e.RowIndex].FindControl("txt_email") as TextBox;
                 TextBox mobile = GridViewManageEmployee.Rows[e.RowIndex].FindControl("txt_mobile") as TextBox;
                 TextBox pincode = GridViewManageEmployee.Rows[e.RowIndex].FindControl("txt_pincode") as TextBox;
                 TextBox address = GridViewManageEmployee.Rows[e.RowIndex].FindControl("txt_address") as TextBox;
-                TextBox isactive = GridViewManageEmployee.Rows[e.RowIndex].FindControl("txt_isactive") as TextBox;
-                con = new SqlConnection(connection);
+                DropDownList isactive = GridViewManageEmployee.Rows[e.RowIndex].FindControl("ddlisactive") as DropDownList;
+            con = new SqlConnection(connection);
                 con.Open();
                 try
                 {
-                    if (name.Text == "" || emailid.Text == "" || mobile.Text == "" || pincode.Text == "" || address.Text == "" || isactive.Text == "")
+                    if (name.Text == "" || emailid.Text == "" || mobile.Text == "" || pincode.Text == "" || address.Text == "")
                     {
                         throw new Exception("Fields Can't be left empty");
                     }
-                    cmd = new SqlCommand("Update employee_info set name='" + name.Text + "',email='" + emailid.Text + "',mobile='" + mobile.Text + "',address='" + address.Text + "',pincode='" + pincode.Text + "',isActive='" + Convert.ToInt32(isactive.Text) + "' where id=" + Convert.ToInt32(id.Text), con);
+                    cmd = new SqlCommand("Update user_info set uname='" + name.Text + "',emailid='" + emailid.Text + "',mobile='" + mobile.Text + "',pincode='" + pincode.Text + "',address='" + address.Text + "',isActive='" + isactive.SelectedValue.ToString() + "' where id=" + Convert.ToInt32(id), con);
                     cmd.ExecuteNonQuery();
                     con.Close();
                     GridViewManageEmployee.EditIndex = -1;

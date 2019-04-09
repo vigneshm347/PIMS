@@ -9,12 +9,13 @@ using System.Data;
 using System.Text;
 using EntityLayer;
 using BusinessLayer;
-using System.Configuration;
+using System.Diagnostics;
 
 namespace PropertyInsurance
 {
     public partial class userPage1 : System.Web.UI.Page
-    {
+    { 
+
         string userid = "";
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -88,7 +89,14 @@ namespace PropertyInsurance
                 html1.Append("</div>");
                 html1.Append("</div>");
                 html1.Append("</div>");
+                
                 html1.Append("</br>");
+                DateTime date1 = Convert.ToDateTime(ds1.Tables[0].Rows[j][9]);
+                DateTime today = DateTime.Today;
+                if ((date1 - today).TotalDays > 0) {
+                    html1.Append("<h3>You are " + (date1 - today).TotalDays + " days away from renewal</h3>");
+                        }
+                else { html1.Append("<h3>You're coverage expired on " + ds1.Tables[0].Rows[j][9] + " Please premium to extend coverage"); }
 
             }
 

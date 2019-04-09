@@ -97,7 +97,7 @@
                     <asp:TextBox CssClass="form-control" MaxLength="50" ID="txtPlanName" runat="server" Width="140" />
                 </td>
                 <td style="width: 150px">
-                    Country:<br />
+                    Premium Amount:<br />
                     <asp:TextBox CssClass="form-control" MaxLength="10" ID="txtPremiumAmt" runat="server" Width="140" />
                 </td>
                 <td style="width: 150px">

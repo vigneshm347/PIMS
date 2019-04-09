@@ -228,7 +228,7 @@ $("#form1").validate({
        <div class="row">
             <div class="col-lg-6 col-sm-12 col-xs-12">
                 <asp:Button ID="btnsubmit" class="btn btn-success register" ClientIDMode="Static"
-                    runat="server" Text="Add Customer" OnClick="btnsubmit_Click" />&nbsp;&nbsp;<asp:Label
+                    runat="server" Text="Add Policy" OnClick="btnsubmit_Click" />&nbsp;&nbsp;<asp:Label
                         ID="lblmailerror" runat="server"></asp:Label>
             </div>
         </div>

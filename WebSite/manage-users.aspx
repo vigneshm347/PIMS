@@ -46,7 +46,7 @@
         </ul>
     </div>
     <div id="search-plan" class="container">
-         <asp:GridView CssClass="table table-responsive" ID="GridView1" runat="server" AutoGenerateColumns="False" OnRowCancelingEdit="GridView1_RowCancelingEdit" CellPadding="6" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating">
+         <asp:GridView CssClass="table table-responsive" ID="GridView1" runat="server" AutoGenerateColumns="False" OnRowCancelingEdit="GridView1_RowCancelingEdit" CellPadding="6" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" DataKeyNames="id">
        <Columns>
            <asp:TemplateField>
                <ItemTemplate>
@@ -110,15 +110,17 @@
                         <asp:TextBox ID="txt_address" MaxLength="100" runat="server" Text='<%#Eval("address") %>'></asp:TextBox>  
                     </EditItemTemplate>  
             </asp:TemplateField>
-
-
-
+           
                        <asp:TemplateField HeaderText="Status">  
-                    <ItemTemplate>  
-                        <asp:Label ID="lbl_isactive" runat="server" Text='<%#Eval("isActive") %>'></asp:Label>  
-                    </ItemTemplate>  
+                           <ItemTemplate>
+                                <asp:Label ID="lbl_isactive" runat="server" Text='<%#Eval("isActive") %>'></asp:Label>  
+                           </ItemTemplate>
                     <EditItemTemplate>  
-                        <asp:TextBox ID="txt_isactive" MaxLength="1" runat="server" Text='<%#Eval("isActive") %>'></asp:TextBox>  
+                        <asp:DropDownList ID="ddlisactive" runat="server" ClientIDMode="Static">
+                            <asp:ListItem Enabled="true" Text="ACTIVATE" Value="active"></asp:ListItem>
+                            <asp:ListItem Text="DE-ACTIVATE" Value="inactive"></asp:ListItem>
+                        </asp:DropDownList>
+                       
                     </EditItemTemplate>  
             </asp:TemplateField> 
        </Columns>

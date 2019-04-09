@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
+using System.Diagnostics;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
@@ -63,23 +60,24 @@ namespace WebSite
         {
             //Finding the controls from Gridview for the row which is going to update  
             SqlCommand cmd;
-            Label id = GridView1.Rows[e.RowIndex].FindControl("lbl_ID") as Label;
-            TextBox uname = GridView1.Rows[e.RowIndex].FindControl("txt_uname") as TextBox;
-            TextBox emailid = GridView1.Rows[e.RowIndex].FindControl("txt_email") as TextBox;
+            int id = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Values[0]);
+            string uname = (GridView1.Rows[e.RowIndex].FindControl("txt_uname") as TextBox).Text;
+            string emailid = (GridView1.Rows[e.RowIndex].FindControl("txt_email") as TextBox).Text;
             TextBox mobile = GridView1.Rows[e.RowIndex].FindControl("txt_mobile") as TextBox;
             TextBox pincode = GridView1.Rows[e.RowIndex].FindControl("txt_pincode") as TextBox;
             TextBox address = GridView1.Rows[e.RowIndex].FindControl("txt_address") as TextBox;
-            TextBox isactive = GridView1.Rows[e.RowIndex].FindControl("txt_isactive") as TextBox;
+            DropDownList isactive = GridView1.Rows[e.RowIndex].FindControl("ddlisactive") as DropDownList;
             con = new SqlConnection(connection);
             con.Open();
             try
             {
-                if (uname.Text == "" || emailid.Text == "" || mobile.Text == "" || pincode.Text == "" || address.Text == "" || isactive.Text == "")
+                if (uname == "" || emailid == "" || mobile.Text == "" || pincode.Text == "" || address.Text == "")
                 {
                     throw new Exception("Fields Can't be left empty");
                 }
-                cmd = new SqlCommand("Update user_info set uname='" + uname.Text + "',emailid='" + emailid.Text + "',mobile='" + mobile.Text + "',pincode='" + pincode.Text + "',address='" + address.Text + "',isActive='" + Convert.ToInt32(isactive.Text) + "' where user_id=" + Convert.ToInt32(id.Text), con);
+                cmd = new SqlCommand("Update user_info set uname='" + uname + "',emailid='" + emailid + "',mobile='" + mobile.Text + "',pincode='" + pincode.Text + "',address='" + address.Text + "',isActive='" + isactive.SelectedValue.ToString() + "' where id=" + Convert.ToInt32(id), con);
                 cmd.ExecuteNonQuery();
+                Debug.WriteLine(cmd.ExecuteNonQuery());
                 con.Close();
                 GridView1.EditIndex = -1;
                 ListCustomers();

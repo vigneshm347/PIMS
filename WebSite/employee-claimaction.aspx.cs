@@ -146,6 +146,13 @@ namespace WebSite
                 html1.Append("</div>");
                 html1.Append("</div>");
                 html1.Append("</br>");
+                DateTime date1 = Convert.ToDateTime(ds1.Tables[0].Rows[j][9]);
+                DateTime today = DateTime.Today;
+                if ((date1 - today).TotalDays > 0)
+                {
+                    html1.Append("<h3'>Plan Active</h3>");
+                }
+                else { html1.Append("<h3>Coverage expired on " + ds1.Tables[0].Rows[j][9] + "."); }
 
             }
 

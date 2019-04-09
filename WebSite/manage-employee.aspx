@@ -47,7 +47,7 @@
         </ul>
     </div>
     <div id="search-plan" class="container">
-         <asp:GridView CssClass="table table-responsive" ID="GridViewManageEmployee" runat="server" AutoGenerateColumns="False" OnRowCancelingEdit="GridView1_RowCancelingEdit" CellPadding="6" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating">
+         <asp:GridView CssClass="table table-responsive" ID="GridViewManageEmployee" runat="server" AutoGenerateColumns="False" OnRowCancelingEdit="GridView1_RowCancelingEdit" CellPadding="6" OnRowEditing="GridView1_RowEditing" DataKeyNames="id" OnRowUpdating="GridView1_RowUpdating">
        <Columns>
            <asp:TemplateField>
                <ItemTemplate>
@@ -65,23 +65,23 @@
             </asp:TemplateField>
             <asp:TemplateField HeaderText="User ID">  
                     <ItemTemplate>  
-                        <asp:Label ID="lbl_userid" runat="server" Text='<%#Eval("employee_id") %>'></asp:Label>  
+                        <asp:Label ID="lbl_userid" runat="server" Text='<%#Eval("user_id") %>'></asp:Label>  
                     </ItemTemplate>  
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Name">  
                     <ItemTemplate>  
-                        <asp:Label ID="lbl_ename" runat="server" Text='<%#Eval("name") %>'></asp:Label>  
+                        <asp:Label ID="lbl_ename" runat="server" Text='<%#Eval("uname") %>'></asp:Label>  
                     </ItemTemplate>  
                     <EditItemTemplate>  
-                        <asp:TextBox ID="txt_ename" MaxLength="50" runat="server" Text='<%#Eval("name") %>'></asp:TextBox>  
+                        <asp:TextBox ID="txt_ename" MaxLength="50" runat="server" Text='<%#Eval("uname") %>'></asp:TextBox>  
                     </EditItemTemplate>  
             </asp:TemplateField> 
             <asp:TemplateField HeaderText="Email">  
                     <ItemTemplate>  
-                        <asp:Label ID="lbl_email" runat="server" Text='<%#Eval("email") %>'></asp:Label>  
+                        <asp:Label ID="lbl_email" runat="server" Text='<%#Eval("emailid") %>'></asp:Label>  
                     </ItemTemplate>  
                     <EditItemTemplate>  
-                        <asp:TextBox ID="txt_email" MaxLength="50" runat="server" Text='<%#Eval("email") %>'></asp:TextBox>  
+                        <asp:TextBox ID="txt_email" MaxLength="50" runat="server" Text='<%#Eval("emailid") %>'></asp:TextBox>  
                     </EditItemTemplate>  
             </asp:TemplateField>
 
@@ -112,11 +112,15 @@
                     </EditItemTemplate>  
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Status">  
-                    <ItemTemplate>  
-                        <asp:Label ID="lbl_isactive" runat="server" Text='<%#Eval("isActive") %>'></asp:Label>  
-                    </ItemTemplate>  
+               <ItemTemplate>
+                                <asp:Label ID="lbl_isactive" runat="server" Text='<%#Eval("isActive") %>'></asp:Label>  
+                           </ItemTemplate>
                     <EditItemTemplate>  
-                        <asp:TextBox ID="txt_isactive" MaxLength="1" runat="server" Text='<%#Eval("isActive") %>'></asp:TextBox>  
+                        <asp:DropDownList ID="ddlisactive" runat="server" ClientIDMode="Static">
+                            <asp:ListItem Enabled="true" Text="ACTIVATE" Value="active"></asp:ListItem>
+                            <asp:ListItem Text="DE-ACTIVATE" Value="inactive"></asp:ListItem>
+                        </asp:DropDownList>
+                       
                     </EditItemTemplate>  
             </asp:TemplateField> 
        </Columns>
